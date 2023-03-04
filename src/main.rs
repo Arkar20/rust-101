@@ -7,11 +7,15 @@ use std::fs::File;
 use std::cmp::Ordering;
 
 fn main() {
-    println!("Name");
-    let mut name:String=String::new();
-    let greeting: &str="Hello world";
-    
+   const PI:f32 =3.14;
+   const PI_WHOLE:u32 =3;
+ 
+   //shadowing
+   let age="232";
 
-    io::stdin().read_line(&mut name).expect("Error");
-    println!("Hello, {}! {}",name.trim_end(),greeting);
+   let mut age:u32=age.trim().parse().expect("msg");
+
+   age=age+1;
+
+   println!("{}",age);
 }
