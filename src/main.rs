@@ -7,15 +7,26 @@ use std::fs::File;
 use std::cmp::Ordering;
 
 fn main() {
-   const PI:f32 =3.14;
-   const PI_WHOLE:u32 =3;
- 
-   //shadowing
-   let age="232";
+   let mut my_age =202;
 
-   let mut age:u32=age.trim().parse().expect("msg");
+   let is_my_age:bool= if my_age==233 {
+       true
+   }else{
+    false
+   };
+   println!("is my age {}",is_my_age);
 
-   age=age+1;
+   match my_age {
+       1..=100 => println!("is between 1 and 100"),
+       10|20=> println!("OR"),
+       _ => println!("all equal to default")
+   }
+let voting_age=18;
 
-   println!("{}",age);
+ match my_age.cmp(&voting_age) {
+    Ordering::Less => println!("CANNOT VOTE"),
+    Ordering::Greater=>println!("CAN VOTE"),
+    Ordering::Equal=>println!("GAIN THE RIGHT TO VOTE")
+
+ }
 }
