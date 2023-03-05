@@ -26,11 +26,16 @@ fn main() {
     }
     let mut array_1 = [1, 2, 3, 4];
     let mut index = 0;
-    loop {
-        if (array_1.len() < index + 1) {
-            break;
-        }
-        println!("looping through array {}", array_1[index]);
-        index += 1;
+    // loop {
+    //     if (array_1.len() < index + 1) {
+    //         break;
+    //     }
+    //     println!("looping through array {}", array_1[index]);
+    //     index += 1;
+    // }
+
+    while array_1.len() > index + 1 {
+        println!("while looping through array {}", array_1[index]);
+        index+=1;
     }
 }
