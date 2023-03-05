@@ -42,4 +42,10 @@ fn main() {
         
         println!("for  looping through array {}", val);
     }
+
+    let mut my_tuple:(u8,String,f64)= (47,"hello world".to_string(),111.9);
+
+    println!("Id is {}", my_tuple.0);
+    println!("Name is {}", my_tuple.1);
+    println!("Number is {}", my_tuple.2);
 }
