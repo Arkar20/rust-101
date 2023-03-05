@@ -39,13 +39,46 @@ fn main() {
     //     index+=1;
     // }
     for val in array_1 {
-        
         println!("for  looping through array {}", val);
     }
 
-    let mut my_tuple:(u8,String,f64)= (47,"hello world".to_string(),111.9);
+    let mut my_tuple: (u8, String, f64) = (47, "hello world".to_string(), 111.9);
 
     println!("Id is {}", my_tuple.0);
     println!("Name is {}", my_tuple.1);
     println!("Number is {}", my_tuple.2);
+
+    let mut text = String::new();
+    text.push('a');
+    text.push_str("rkar");
+
+    println!("Stiring Name is {}", text);
+
+    let new_text = text.replace("a", "jeffery");
+    println!("new name is {}", new_text);
+
+    let predefine_string = String::from("a r k a r");
+    let mut v1: Vec<char> = predefine_string.chars().collect();
+
+    v1.sort();
+    v1.dedup();
+
+    for value in v1 {
+        println!("vector {}", value);
+    }
+    let str4 = "Hello";
+    let mut str5 = str4.to_string();
+
+    println!("{}", str5);
+    let byte_string = str4.as_bytes();
+
+    //slice
+    let slice_string = &str4[0..2];
+    println!("Slice String {}", slice_string);
+
+    let myn_name= String::from("arkar");
+    let eng_name= String::from("jeffery");
+
+    let full_name= myn_name + &eng_name;
+    println!("Full name is {}",full_name);
 }
