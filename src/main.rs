@@ -34,8 +34,12 @@ fn main() {
     //     index += 1;
     // }
 
-    while array_1.len() > index + 1 {
-        println!("while looping through array {}", array_1[index]);
-        index+=1;
+    // while array_1.len() > index + 1 {
+    //     println!("while looping through array {}", array_1[index]);
+    //     index+=1;
+    // }
+    for val in array_1 {
+        
+        println!("for  looping through array {}", val);
     }
 }
