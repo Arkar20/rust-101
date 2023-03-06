@@ -81,11 +81,32 @@ fn main() {
 
     let full_name= myn_name + &eng_name;
     println!("Full name is {}",full_name);
-
+    //casting
     let num_1:i16=12;
     let num_2:i8=16;
 
     let sum:i32= (num_1 as i32) + (num_2 as i32);
 
     println!("sum is {}",sum);
+
+    //enum
+    enum Days{
+        MONDAY,
+        TUESDAY,
+        WEDNESSDAY,
+    }
+
+    impl  Days  {
+        fn is_monday(&self)->bool{
+            match self {
+                Days::MONDAY => true,
+                _ => false,
+
+            }
+        }
+    }
+
+    let today=Days::MONDAY;
+
+    println!("Today is monday {}", today.is_monday())
 }
