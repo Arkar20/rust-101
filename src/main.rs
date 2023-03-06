@@ -81,4 +81,11 @@ fn main() {
 
     let full_name= myn_name + &eng_name;
     println!("Full name is {}",full_name);
+
+    let num_1:i16=12;
+    let num_2:i8=16;
+
+    let sum:i32= (num_1 as i32) + (num_2 as i32);
+
+    println!("sum is {}",sum);
 }
