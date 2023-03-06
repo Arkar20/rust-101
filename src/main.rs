@@ -108,5 +108,27 @@ fn main() {
 
     let today=Days::MONDAY;
 
-    println!("Today is monday {}", today.is_monday())
+    println!("Today is monday {}", today.is_monday());
+
+    //vector
+    //vectors are mutable arrays
+
+    let mut nums:Vec<i32> = Vec::new();
+
+    nums.push(19);
+
+    let mut nums2:Vec<i32> = vec![1,2,3,4];
+    nums2.push(188);
+   
+    for  value in &mut nums2 {
+        *value*=2;
+        println!("value is {}",value);
+        
+    }
+
+    println!("value in first index of vector {}",nums2[0]);
+    println!("value in first index of vector by fun {:?}",nums2.get(1)); // :? indicates he return value of fn
+    println!("Length :{}",nums2.len()); 
+
+
 }
