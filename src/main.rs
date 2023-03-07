@@ -6,6 +6,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, ErrorKind, Write};
 use std::{array, io};
 
+
 fn main() {
     let mut my_age = 202;
 
@@ -125,10 +126,18 @@ fn main() {
         println!("value is {}",value);
         
     }
-
+    
     println!("value in first index of vector {}",nums2[0]);
+    
     println!("value in first index of vector by fun {:?}",nums2.get(1)); // :? indicates he return value of fn
     println!("Length :{}",nums2.len()); 
 
+    println!("3+4 of i32 is {}",get_sum(2,3));
 
 }
+
+fn get_sum(x:i32,y:i32) -> i32{
+    return (x+y);
+}
+
+
