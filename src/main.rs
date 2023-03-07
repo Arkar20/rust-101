@@ -5,6 +5,7 @@ use std::cmp::Ordering;
 use std::fs::File;
 use std::io::{BufRead, BufReader, ErrorKind, Write};
 use std::{array, io};
+use std::ops::Add;
 
 
 fn main() {
@@ -133,6 +134,7 @@ fn main() {
     println!("Length :{}",nums2.len()); 
 
     println!("3+4 of i32 is {}",get_sum(2,3));
+    println!("3+4 of generic is {}",get_sum_gen(2.23,3.22));
 
 }
 
@@ -140,4 +142,6 @@ fn get_sum(x:i32,y:i32) -> i32{
     return (x+y);
 }
 
-
+fn get_sum_gen<T:Add<Output=T>>(x: T,y:T) -> T{
+    return (x+y);
+}
