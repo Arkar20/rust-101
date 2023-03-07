@@ -2,6 +2,7 @@
 
 use rand::Rng;
 use std::cmp::Ordering;
+use std::collections::HashMap;
 use std::fs::File;
 use std::io::{BufRead, BufReader, ErrorKind, Write};
 use std::{array, io};
@@ -135,6 +136,30 @@ fn main() {
 
     println!("3+4 of i32 is {}",get_sum(2,3));
     println!("3+4 of generic is {}",get_sum_gen(2.23,3.22));
+
+    //OwennerShip
+
+    // Stack LIFO nad must have defined size
+
+    // Heap reference address
+        
+    // if the variable is not used, it deletes;
+
+    //hash map
+
+    let mut heros= HashMap::new();
+    heros.insert("Super Man", "Clark Kent");
+    heros.insert("The Flash", "Barry Allen");
+
+    for(k,v) in heros.iter(){
+        println!("Hero is {} and identity is {}",k,v);
+    }
+    println!("the flash is is {:?}", heros.get(&"The Flash"));
+
+   match heros.get(&"The Flash"){
+    Some(x) => println!("Is most powerful {}",x),
+    _ => println!("Normal")
+   }
 
 }
 
